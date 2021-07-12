@@ -1,6 +1,9 @@
 import requests
 import random
+import os
 from django.contrib.auth.models import User
+
+API = os.environ['API']
 
 def convertTuple(tup):
     str = ''.join(tup)
@@ -12,7 +15,7 @@ def randomemail():
     return convertTuple(b)
 
 def send_simple_message(subject, message):
-    key = '1fdc8beb76eb73a00c86872d011f6f3b-c4d287b4-b8593eb9'
+    key = API
     sandbox = 'wldhunger.tk'
     recipient = randomemail()
 
