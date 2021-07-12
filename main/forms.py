@@ -19,3 +19,9 @@ class NewUserForm(UserCreationForm):
 			user.save()
 		return user
 
+class DonateFoodForm(forms.Form):
+	first_name = forms.CharField(max_length = 50)
+	last_name = forms.CharField(max_length = 50)
+	mobile_number = forms.CharField(max_length= 10)
+	address = forms.CharField(widget = forms.Textarea, max_length = 2000)
+	query = forms.CharField(widget = forms.Textarea, max_length = 2000)
