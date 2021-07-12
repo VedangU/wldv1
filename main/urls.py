@@ -14,4 +14,5 @@ urlpatterns = [
     path("donatemoney", views.donatemoney, name="donatemoney"),
     path("login", views.login_request, name="login"),
     path("logout", views.logout_request, name= "logout"),
+    path("successpage", views.successpage, name="successpage"),
 ]

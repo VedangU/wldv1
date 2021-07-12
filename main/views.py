@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
-from .forms import DonateFoodForm, NewUserForm
+from .forms import ContactForm, DonateFoodForm, NewUserForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages #import messages
 from django.contrib.auth.forms import AuthenticationForm #add this
 from django.http import HttpResponse
 from django.core.mail import send_mail, BadHeaderError
 from .send import send_simple_message
+from .sendc import send_message
 
 # Create your views here.
 
@@ -13,7 +14,27 @@ def homepage(request):
 	return render(request=request, template_name='main/index.html')
 
 def contact(request):
-	return render(request=request, template_name='main/contact.html')
+	if request.method == 'POST':
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			subject = "Query" 
+			body = {
+			'first_name': form.cleaned_data['first_name'], 
+			'last_name': form.cleaned_data['last_name'], 
+			'mobile': form.cleaned_data['mobile_number'], 
+			'address':form.cleaned_data['address'], 
+			'query':form.cleaned_data['query'], 
+			}
+			message = "\n".join(body.values())
+
+			try:
+				send_message(subject, message) 
+			except BadHeaderError:
+				return HttpResponse('Invalid header found.')
+			return render(request, "main/successpagec.html")
+      
+	form = ContactForm()
+	return render(request, "main/contact.html", {'form':form})
 
 def aboutus(request):
 	return render(request=request, template_name='main/aboutus.html')
@@ -36,7 +57,7 @@ def donatefood(request):
 				send_simple_message(subject, message) 
 			except BadHeaderError:
 				return HttpResponse('Invalid header found.')
-			return redirect ("main:homepage")
+			return render(request, "main/successpage.html")
       
 	form = DonateFoodForm()
 	return render(request, "main/donatefoodnew.html", {'form':form})
@@ -85,3 +106,6 @@ def ngo_registration(request):
 
 def donatemoney(request):
 	return render(request=request, template_name='main/donatemoney.html')
+
+def successpage(request):
+	return render(request=request, template_name='main/successpage.html')
