@@ -20,8 +20,27 @@ class NewUserForm(UserCreationForm):
 		return user
 
 class DonateFoodForm(forms.Form):
-	first_name = forms.CharField(max_length = 50)
-	last_name = forms.CharField(max_length = 50)
-	mobile_number = forms.CharField(max_length= 10)
-	address = forms.CharField(widget = forms.Textarea, max_length = 2000)
-	query = forms.CharField(widget = forms.Textarea, max_length = 2000)
+	first_name = forms.CharField(
+		max_length = 50,
+		label="First Name"		
+		)
+	last_name = forms.CharField(
+		max_length = 50,
+		label="Last Name"
+		)
+	mobile_number = forms.CharField(
+		min_length=10,
+		max_length= 10,
+		label="Mobile Number"
+		)
+	address = forms.CharField(
+		widget = forms.Textarea,
+		max_length = 2000,
+		label="Address"
+		)
+	query = forms.CharField(
+		widget = forms.Textarea,
+		max_length = 2000,
+		label="Any other query/request?",
+		required=False
+		)
