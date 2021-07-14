@@ -68,113 +68,90 @@
  }
 
 .content{
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     position: relative;
 }
 .footer{
     width: 100%;
-    background-color:rgb(242, 232, 252) ;
-    padding-bottom: 3rem;
-    height: 200px;
+    background-color:rgb(247, 247, 247) ;
     position: relative;
+    display: flex;
+    padding-bottom: 5rem;
+}
+.footer_button{
+    display: flex;
+    flex-direction: column;
 }
 .footer-right{
     width: 60%;
-    height: 200px;
-    background-color:rgb(242, 232, 252) ;
-    position: absolute;
-    right: 0px;
-    top: 0px;
+    background-color:rgb(247, 247, 247) ;
+    display: flex;
+    margin-top: 40px;
 
 }
 .facilities{
-    width: 25%;
-    height: 140px;
-    background-color:rgb(242, 232, 252) ;
-    position: absolute;
-    left: 200px;
-    top: 40px
+    width: 24%;
+    background-color:rgb(247, 247, 247) ;
+    padding-left: 10px;
 }
 .social{
     width: 30%;
-    height: 100px;
-    background-color:rgb(242, 232, 252) ;
-    position: absolute;
-    left: 360px;
-    top: 40px
+    background-color:rgb(247, 247, 247) ;
+    padding-left: 10px;
 }
 .infome{
-    width: 25%;
-    height: 100px;
-    background-color:rgb(242, 232, 252) ;
-    position: absolute;
-    left: 50px;
-    top: 40px
+    width: 20%;
+    background-color:rgb(247, 247, 247) ;
 }
 .footer_h6{
     font-size: 15px;
-    position: absolute;
-    left: 10px;
+    margin-bottom: 7px;
 }
 .footer_link1{
     text-decoration: none;
     color: rgb(49, 47, 47);
-    position: absolute;
-    top: 25px;
-    left: 10px;
+    margin-bottom: 3px;
 }
 .footer_link2{
     text-decoration: none;
     color: rgb(49, 47, 47);
-    position: absolute;
-    top: 50px;
-    left: 10px;
+    margin-bottom: 3px;
 }
 .footer_link3{
     text-decoration: none;
     color: rgb(49, 47, 47);
-    position: absolute;
-    top: 75px;
-    left: 10px;
+    margin-bottom: 3px;
 }
 .footer_link4{
     text-decoration: none;
     color: rgb(49, 47, 47);
-    position: absolute;
-    top: 100px;
-    left: 10px;
+    margin-bottom: 3px;
 }
 .footer-right a:hover{
     color:rgb(0, 0, 0);
     font-weight: bolder;
 }
 .gs{
-    padding-top: 25px;
-    margin-left: 10px;
+    padding-top: 7px;
+    margin-left: 2px;
     cursor: pointer;
 }
 .footer-left{
-    width: 40%;
-    height: 200px;
-    background-color:rgb(242, 232, 252) ;
+    width: 50%;
+    background-color:rgb(247, 247, 247) ;
+    margin-top: 40px;
+    margin-left: 120px;
 }
-.footertitle{
-    position: absolute;
-    left: 100px;
-    top: 40px
+.footertitle h3{
+    font-size: 25px;
 }
 .tax{
-    font-size: 12px;
-    position: absolute;
-    top: 110px;
-    /* right: 0px; */
-    left: 100px;
+    font-size: 16px;
+    padding-top: 5px;
 }
 .registration_acts{
-    font-size: 12px;
-    position: absolute;
-    top: 70px;
-    left: 100px
+    font-size: 16px;
+    padding-top: 5px;
 }
 
 .nav-right{
@@ -183,7 +160,7 @@
   position: absolute;
 }
 .small_h5{
-    width: 50%;
+    width: 80%;
     height: 50px;
     position: absolute;
     left: 110px;
@@ -206,7 +183,7 @@
     font-family: var(--font3);
 }
 .big_h1{
-    width: 70%;
+    width: 80%;
     height: 50px;
     position: absolute;
     left: 110px;
@@ -214,7 +191,7 @@
     font-family: var(--font1);
 }
 .big_h5{
-    width: 70%;
+    width: 80%;
     height: 50px;
     position: absolute;
     left: 110px;
@@ -243,21 +220,21 @@
 
 .tabs{
     position: absolute;
-    width: 103%;
+    width: 100%;
     right: 0px;
     padding: 15px 0px;
-    margin-right: -40px;
-    top: 10px;
+    margin-right: 0px;
+    top: 16px;
 }
 .tabs ul{
     display: flex;
     align-items: center;
-    justify-content: end;
-    margin: 0px 90px;
+    justify-content: flex-end;
+    margin-right: 50px;
 }
 .tabs ul li{
     list-style: none ;
-    padding: 10px 12px;
+    padding: 15px 25px;
     transition:all 0.2s ease-in-out;
     FONT-FAMILY: var(--font3);
     font-weight: bolder;
@@ -265,11 +242,20 @@
 .tabs ul li a{
     text-decoration: none;
     color: white;
-    font-size: 13px;
+    font-size: 18px;
 }
 .tabs ul li :hover{
     color:rgb(219, 102, 102);
     color:rgb(219, 102, 102);
+}
+.tabs ul li .current{
+    color:rgb(219, 102, 102);
+}
+.icon{
+    margin-right: 20px;
+    font-size: 22px;
+    color: white;
+    display: none;
 }
 
 .payment p{
@@ -316,7 +302,7 @@
     color: black;
     font-size: 21px;
     font-family: var(--font1);
-    margin-top: 15px;
+    margin-top:20px;
 }
 .content3 h3{
     color: #575252;
@@ -362,14 +348,14 @@
 .facility1_heading h2{
     font-size: 30px;
     font-family: var(--font3);
-    margin-left: 400px; 
+    margin-left: 380px; 
     margin-top: 40px;  
 }
 .facility_button{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 30px;
     margin-bottom: 25px
 }
 .contentmain{
@@ -377,6 +363,7 @@
     padding: 0px;
     margin-top: 20px;
     margin-left: 10px;
+    display: flex;
 }
 .contentmain_about{
     color: black;
@@ -396,16 +383,16 @@
 
 .contentmain-left p{
     font-family: var(--font3);
-    font-size: 19px;
+    font-size: 20px;
     margin-top: 5px;
-    margin-right: 400px;
+    margin-right: 50px;
+}
+.contentmain-left{
+    width: 60%;
 }
 .contentmain-right{
      padding-left: 5px;
-     position: absolute;
-     width: 42%;
-     right: 0px;
-     top: 0px;
+    width: 40%;
 }
 .contentmain-right img {
     width: 340px;
@@ -448,21 +435,19 @@
     padding: 0px;
     margin-top: 20px;
     margin-left: 10px;
+    display: flex;
 }
 
 .contentmain1-left p{
     font-family: var(--font3);
-    font-size: 19px;
+    font-size: 20px;
     margin-top: 5px;
-    margin-right: 0px;
-    margin-left: 400px;
+    margin-left: 30px;
 }
 .contentmain1-right{
      padding-left: 5px;
-     position: absolute;
-     width: 42%;
-     top: 0px;
 }
+
 .contentmain1-right img {
     width: 340px;
     height: 250px;
@@ -672,3 +657,14 @@
     margin-left: 110px;
     margin-bottom: 15px;
 }
+
+
+
+
+
+
+
+/* Add a black background color to the top navigation */
+.tabs {
+    overflow: hidden;
+  }

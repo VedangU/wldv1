@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+    {% load static %}
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>world without hunger</title>
+    <title>World Without Hunger</title>
     <link rel="stylesheet " href="{% static 'theme/css/utility.css' %}">
     <link rel="stylesheet" href="{% static 'theme/css/style.css' %}">
+    <link rel="stylesheet" media="screen and (max-width:480px) and (min-width:300px)" href="{% static 'theme/css/phone.css' %}">
+    <link rel="stylesheet" media="screen and (max-width:768px) and (min-width:480px)" href="{% static 'theme/css/tablet.css' %}">
+    <link rel="stylesheet" media="screen and (max-width:870px) and (min-width:768px)" href="{% static 'theme/css/laptop2.css' %}">
+    <link rel="stylesheet" media="screen and (max-width:1000px) and (min-width:870px)" href="{% static 'theme/css/laptop.css' %}">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'icon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'icon/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'icon/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'icon/site.webmanifest' %}">
-
 </head>
 
 <body>
@@ -23,10 +26,6 @@
                 <ul>
                     <li><a href="index">HOME</a></li>
                     <li><a href="aboutus">ABOUT US</a></li>
-                    <li><a href="donatefood">DONATE FOOD</a></li>
-                    <li><a href="volunteer_registration">VOLUNTEER</a></li>
-                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSecJIK55zN3bKR7FSoI_KGMoFk9iiBmVkC3Is3w74cqe_-1-g/viewform?usp=sf_link">REQUEST FOR FOOD</a></li>
-                    <li><a href="donatemoney">DONATE MEAL</a></li>
                     <li><a href="contact">CONTACT US</a> </li>
                     <li><a href="#">YOUR PROFILE </a></li>
                 </ul>
@@ -58,24 +57,45 @@
     <div class="razopay">
         <form>
             <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HU3m0Hq37QioLu"
-                async> </script>
+                async>
+                </script>
         </form>
+
     </div>
     <div class="footer  ">
+        <div class="footer-left">
+            <div class="footertitle">
+                <h3>WORLD WITHOUT HUNGER</h3>
+            </div>
+            <div class="registration_acts">
+                <p>Registered as Hunger Heroes</p>
+                <p>Under Indian Society Registration Act XXI, 1860</p>
+            </div>
+            <div class="tax">
+                <p>All donations are tax-exempted as eligible</p>
+                <p>under section 80G of the the Income Tax Act, 1961</p>
+            </div>
+
+        </div>
+
         <div class="footer-right">
             <div class="infome">
-                <h6 class="footer_h6"><b>Who we are</b></h6>
-                <a class="footer_link1" href="aboutus"><span class="footer_word">About us</span></a>
-                <a class="footer_link2" href="contact"><span class="footer_word">Contact us</span></a>
+                <h6 class="footer_h6"><b>Who We Are</b></h6>
+                <div class="footer_button">
+                    <a class="footer_link1" href="aboutus"><span class="footer_word">About us</span></a>
+                    <a class="footer_link2" href="contact"><span class="footer_word">Contact us</span></a>
+                </div>
             </div>
             <div class="facilities">
                 <h6 class="footer_h6"><b>Get Involved</b></h6>
-                <a class="footer_link1" href="donatefood"><span class="footer_word">Donate Food</span></a>
-                <a class="footer_link2" href="https://docs.google.com/forms/d/e/1FAIpQLSecJIK55zN3bKR7FSoI_KGMoFk9iiBmVkC3Is3w74cqe_-1-g/viewform?usp=sf_link"><span class="footer_word">Request For
-                        Food</span></a>
-                <a class="footer_link3" href="volunteer_registration"><span
-                        class="footer_word">Volunteer</span></a>
-                <a class="footer_link4" href="donatemoney"><span class="footer_word">Donate Meal</span></a>
+                <div class="footer_button">
+                    <a class="footer_link1" href="donatefood"><span class="footer_word">Donate Food</span></a>
+                    <a class="footer_link2" href="https://docs.google.com/forms/d/e/1FAIpQLSecJIK55zN3bKR7FSoI_KGMoFk9iiBmVkC3Is3w74cqe_-1-g/viewform?usp=sf_link"><span class="footer_word">Request For
+                            Food</span></a>
+                    <a class="footer_link3" href="volunteer_registration"><span
+                            class="footer_word">Volunteer</span></a>
+                    <a class="footer_link4" href="donatemoney"><span class="footer_word">Donate Meal</span></a>
+                </div>
             </div>
             <div class="social">
                 <h6 class="footer_h6"><b>Social</b></h6>
@@ -103,20 +123,6 @@
                         d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM7.0625 8.375H4.75V15.4375H7.0625V8.375ZM7.25 6.1875C7.25 5.5 6.75 5 5.9375 5C5.125 5 4.5625 5.5 4.5625 6.1875C4.5625 6.875 5.0625 7.4375 5.875 7.4375C6.6875 7.4375 7.25 6.875 7.25 6.1875ZM15.5 11.375C15.5 9.1875 14.3125 8.1875 12.8125 8.1875C11.5625 8.1875 11 8.875 10.6875 9.375V8.375H8.375C8.375 9.0625 8.375 15.4375 8.375 15.4375H10.6875V11.5C10.6875 11.3125 10.6875 11.0625 10.75 10.9375C10.9375 10.5 11.3125 10.0625 11.9375 10.0625C12.75 10.0625 13.125 10.6875 13.125 11.6875V15.4375H15.4375C15.5 15.4375 15.5 11.375 15.5 11.375Z">
                     </path>
                 </svg>
-            </div>
-
-        </div>
-        <div class="footer-left">
-            <div class="footertitle">
-                <h3>WORLD WITHOUT HUNGER</h3>
-            </div>
-            <div class="registration_acts">
-                <p>Registered as Hunger Heroes</p>
-                <p>Under Indian Society Registration Act XXI, 1860</p>
-            </div>
-            <div class="tax">
-                <p>All donations are tax-exempted as eligible</p>
-                <p>under section 80G of the the Income Tax Act, 1961</p>
             </div>
 
         </div>
