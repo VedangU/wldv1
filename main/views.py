@@ -34,7 +34,7 @@ def contact(request):
 			return render(request, "main/successpagec.html")
       
 	form = ContactForm()
-	return render(request, "main/contact.html", {'form':form})
+	return render(request, "main/contactv2.html", {'form':form})
 
 def aboutus(request):
 	return render(request=request, template_name='main/aboutus.html')
