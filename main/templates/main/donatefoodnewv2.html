@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% load static %}
+  {% load static %}
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Without Hunger</title>
+    <title>Donate Food</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet " href="{% static 'theme/css/utility.css' %}">
     <link rel="stylesheet" href="{% static 'theme/css/style.css' %}">
     <link rel="stylesheet" media="screen and (max-width:480px) and (min-width:300px)" href="{% static 'theme/css/phone.css' %}">
@@ -20,7 +21,7 @@
 </head>
 
 <body>
-    <div class="navigation_donatemeal">
+    <div class="navigation_donatefood">
         <div class="nav-right">
             <div class="tabs">
                 <ul>
@@ -35,33 +36,48 @@
         </div>
         <div class="nav-left">
             <div class="small_h5">
-                <h1>GIVE MORE OUT OF LIFE</h1>
+                <h1>YOUR SUPPORT MATTERS</h1>
             </div>
             <div class="big_h5">
-                <h4>HAPPINESS COMES FROM YOUR ACTION</h4>
+                <h5>Contribute to help us provide essential food support to those in need</h5>
 
             </div>
         </div>
     </div>
     <div class="content2 ">
         <!--<img src="https://muslimhands.org.uk/_ui/images/97b5958d6e96.jpg" alt="image isn't clear"> -->
-        <h3> We believe providing regular meals to dependents in underserved communities to reduce financial burden in
-            the short term, empowering them to become free from hunger in the long term. </h3>
+        <h3> Your support would mean, more people fed, more dreams fulfilled and a better future, together. </h3>
         <p>
-            Your donation is in form of Meal. so we supply all this meal to NGO'S organization who required daily bulk
-            meal.
+            You are really doing good job of save wasted food as well taken wise decision to donate it . here is a place
+            where you can donate food which gives to hungry people through our volunteer .
         </p>
     </div>
-    <div class="payment">
-        <p>You can pay here</p>
+    <div class="form_title">
+        <h2>DONATE <b> HEALTHY FOOD </b></h2>
     </div>
-    <div class="razopay">
-        <form>
-            <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_HU3m0Hq37QioLu"
-                async>
-                </script>
-        </form>
-
+    <div class="register max-width-1 m-auto">
+      <form method="post" role="form">
+        {% csrf_token %}          
+          <div class="form-group">
+            {{form.first_name|as_crispy_field}}
+          </div>
+          <div class="form-group">
+            {{form.last_name|as_crispy_field}}
+          </div>          
+        <div class="form-group">
+            {{form.mobile_number|as_crispy_field}}
+        </div>
+        <div class="form-group">
+            {{form.address|as_crispy_field}}
+        </div>
+        <div class="form-group">
+            {{form.query|as_crispy_field}}
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary" type="submit">Submit</button>
+            <a class="btn btn-dark" href="index" role="button">Back to Homepage</a>
+        </div>    
+    </form>
     </div>
     <div class="footer  ">
         <div class="footer-left">
@@ -131,6 +147,7 @@
 
 
     </div>
+
 </body>
 
 </html>

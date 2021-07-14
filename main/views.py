@@ -60,7 +60,7 @@ def donatefood(request):
 			return render(request, "main/successpage.html")
       
 	form = DonateFoodForm()
-	return render(request, "main/donatefoodnew.html", {'form':form})
+	return render(request, "main/donatefoodnewv2.html", {'form':form})
 
 ###########################  LOGIN AND REGISTRATION SYSTEM  #######################################
 
