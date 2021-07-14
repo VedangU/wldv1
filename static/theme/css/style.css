@@ -71,18 +71,18 @@
     margin-bottom: 50px;
     position: relative;
 }
-.footer{
+.footerx{
     width: 100%;
     background-color:rgb(247, 247, 247) ;
     position: relative;
     display: flex;
     padding-bottom: 5rem;
 }
-.footer_button{
+.footerx_button{
     display: flex;
     flex-direction: column;
 }
-.footer-right{
+.footerx-right{
     width: 60%;
     background-color:rgb(247, 247, 247) ;
     display: flex;
@@ -103,31 +103,31 @@
     width: 20%;
     background-color:rgb(247, 247, 247) ;
 }
-.footer_h6{
+.footerx_h6{
     font-size: 15px;
     margin-bottom: 7px;
 }
-.footer_link1{
+.footerx_link1{
     text-decoration: none;
     color: rgb(49, 47, 47);
     margin-bottom: 3px;
 }
-.footer_link2{
+.footerx_link2{
     text-decoration: none;
     color: rgb(49, 47, 47);
     margin-bottom: 3px;
 }
-.footer_link3{
+.footerx_link3{
     text-decoration: none;
     color: rgb(49, 47, 47);
     margin-bottom: 3px;
 }
-.footer_link4{
+.footerx_link4{
     text-decoration: none;
     color: rgb(49, 47, 47);
     margin-bottom: 3px;
 }
-.footer-right a:hover{
+.footerx-right a:hover{
     color:rgb(0, 0, 0);
     font-weight: bolder;
 }
@@ -136,13 +136,13 @@
     margin-left: 2px;
     cursor: pointer;
 }
-.footer-left{
+.footerx-left{
     width: 50%;
     background-color:rgb(247, 247, 247) ;
     margin-top: 40px;
     margin-left: 120px;
 }
-.footertitle h3{
+.footerxtitle h3{
     font-size: 25px;
 }
 .tax{

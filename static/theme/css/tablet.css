@@ -138,13 +138,13 @@
 .facility_button{
     padding-top: 15px;
 }
-.footer {
+.footerx {
     width: 100%;
     display: flex;
     flex-direction: column;
     padding-bottom: 5rem;
 }
-.footer-right {
+.footerx-right {
     width:80%;
     margin-top: 40px;
     margin-left: 100px;
@@ -155,21 +155,21 @@
 .social{
     width: 29%;
 }
-.footer-left {
+.footerx-left {
     width: 80%;
     margin-top: 40px;
     margin-left: 100px;
 }
-.footertitle h3 {
+.footerxtitle h3 {
     font-size: 21px;
 }
 .tax p ,.registration_acts p{
     font-size: 15px;
 }
-.footer_link1,.footer_link2,.footer_link3,.footer_link4{
+.footerx_link1,.footerx_link2,.footerx_link3,.footerx_link4{
     font-size: 13px;
 }
-.footer_h6{
+.footerx_h6{
     font-size: 14px;
 }
 .form_title{
